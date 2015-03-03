@@ -10,19 +10,42 @@
 
     <properties>
         <version.spring>4.1.5.RELEASE</version.spring>
-
     </properties>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.2</version>
+                <configuration>
+                    <source>7</source>
+                    <target>7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <repositories>
+        <repository>
+            <!-- DO NOT set id to "local" because it is reserved by Maven -->
+            <id>lib</id>
+            <releases>
+                <enabled>true</enabled>
+                <checksumPolicy>ignore</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <url>file://${project.basedir}/libs</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
     <dependencies>
         <dependency>
-            <groupId>evenova</groupId>
-            <artifactId>eve-api</artifactId>
+            <groupId>evanova</groupId>
+            <artifactId>evanova-eve-api</artifactId>
             <version>4.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/resources/libs/evanova-eve-api-4.0.jar</systemPath>
         </dependency>
-
         <!--<dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpcore</artifactId>
@@ -95,7 +118,8 @@
             <version>1.0.9</version>
             <scope>test</scope>
         </dependency>
-        <dependency><groupId>junit</groupId>
+        <dependency>
+            <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
