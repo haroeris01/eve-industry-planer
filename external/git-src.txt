@@ -1,0 +1,2 @@
+https://bitbucket.org/evanova/eve-api.git
+https://bitbucket.org/evanova/eve-proxy.git

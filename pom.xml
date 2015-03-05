@@ -23,6 +23,25 @@
                     <target>7</target>
                 </configuration>
             </plugin>
+            <!--<plugin>
+                <groupId>org.fortasoft</groupId>
+                <artifactId>gradle-maven-plugin</artifactId>
+                <version>1.0.5</version>
+                <configuration>
+                    <gradleProjectDirectory>${project.basedir}/eve-nova-api</gradleProjectDirectory>
+                    <tasks>
+                        <task>jar</task>
+                    </tasks>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>invoke</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
         </plugins>
     </build>
     <repositories>
@@ -46,11 +65,6 @@
             <artifactId>evanova-eve-api</artifactId>
             <version>4.0</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpcore</artifactId>
-            <version>4.1.4</version>
-        </dependency>-->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
